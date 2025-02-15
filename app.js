@@ -58,7 +58,7 @@ async function fetchProducts() {
   try {
     const response = await axios.post(
       API_URL,
-      { query: queryProducts, variables: { query: `title:${productName}*` } },
+      { query: queryProducts, variables: { query: `title:*${productName}*` } },
       { headers: { 'X-Shopify-Access-Token': ACCESS_TOKEN, 'Content-Type': 'application/json' } }
     );
 
